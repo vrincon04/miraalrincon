@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Victor Rincon">
+		<meta property="fb:admins" content="100000562012348" />
+		<meta property="fb:admins" content="267854673340325" />
+		<title>Mira al Rincon - Contact</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.tweet.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.followbox.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			jQuery(function($){
+				$("#ticker").tweet({
+					username: "MiraalRincon",
+					page: 1,
+					avatar_size: 32,
+					count: 20,
+					loading_text: "loading ..."
+				}).bind("loaded", function() {
+					var ul = $(this).find(".tweet_list");
+					var ticker = function() {
+						setTimeout(function() {
+							var top = ul.position().top;
+							var h = ul.height();
+							var incr = (h / ul.children().length);
+							var newTop = top - incr;
+							if (h + newTop <= 0) newTop = 0;
+							ul.animate( {top: newTop}, 500 );
+							ticker();
+						}, 5000);
+					};
+					ticker();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<section id="wrapper">
+			<header>
+				<div id="logo"></div>
+				<nav>
+					<ul id="menu">
+						<li><a href="index.html">Inicio</a></li>
+						<li>
+							<a href="#">Categories</a>
+							<ul>
+								<li><a href="#">CSS</a></li>
+								<li><a href="#">Graphic design</a></li>
+								<li><a href="#">Development tools</a></li>
+								<li><a href="#">Web design</a></li>
+							</ul>
+						</li>
+						<li><a href="about.html">Acerca de</a></li>
+						<li><a href="contact.html">Contacto</a></li>
+					</ul>
+				</nav>
+				<div class="fix"></div>
+			</header>
+			<section id="contact">
+				<h2>Nos encantar&iacute;a saber de ti!</h2>
+				<h3>Si tienes alguna pregunta o comentario env&iacute;anos unas l&iacute;neas.</h3>
+				<form id="contact_form" name="contact_form" onsubmit="return false;">
+					<p>
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="name" placeholder="Name..." />
+					</p>
+					<p>
+						<label for="email">E-mail:</label>
+						<input type="email" id="email" name="email" placeholder="E-mail..." />
+					</p>
+					<p>
+						<label for="subject">Subject:</label>
+						<input type="text" id="subject" name="subject" placeholder="Subject..." />
+					</p>
+					<p>
+						<label for="message">Message</label>
+						<textarea id="message" name="message" placeholder="Message..."></textarea>
+					</p>
+				</form>
+			</section>
+			<footer id="footer">
+				<section>
+					<article>
+						<h3>Recent Tweets</h3>
+						<div id="ticker"></div>
+					</article>
+					<article>
+						<h3>Stay Connected</h3>
+						<div id="social">
+							<ul>
+								<li>
+									<a href="javascript:void(0);">
+										<img src="assets/img/social/twitter.png" alt="twitter" style="width: 65%" />
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">
+										<img src="assets/img/social/facebook.png" alt="facebook" style="width: 65%" />
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">
+										<img src="assets/img/social/skype.png" alt="skype" style="width: 65%" />
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">
+										<img src="assets/img/social/rss.png" alt="rss" style="width: 65%" />
+									</a>
+								</li>
+							</ul>
+							<p>Keep track of Unite on all your favorite social networks.</p>
+						</div>
+					</article>
+					<article>
+						<h3>Contact Information</h3>
+						<div id="contact-info">
+							<p>+1 (809) 555-5555</p>
+							<p>miraalrincon@gmail.com</p>
+							<a href="javascript:void(0);">miraalrincon.net</a>
+						</div>
+					</article>
+				</section>
+			</footer>
+		</section>
+		<footer id="copyright">
+			<article>
+				<div id="copy">
+					<span>Copyright © 2013 - Mira al Rincc&oacute;n. Todos los derechos reservados</span>
+					<span>Powered by <a href="javascript:void(0);">Victor Rinc&oacute;n</a></span>
+				</div>
+				<div id="footer-line">
+					<div class="vertical-line" style="left: 298px;"></div>
+					<div class="vertical-line" style="left: 575px;"></div>
+				</div>
+			</article>
+		</footer>
+	</body>
+</html>

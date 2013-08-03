@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Victor Rincon">
+		<meta property="fb:admins" content="100000562012348" />
+		<meta property="fb:admins" content="267854673340325" />
+		<title>Mira al Rincon</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="assets/css/default-five-slides.css" type="text/css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.flexslider-min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.tweet.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.followbox.min.js"></script>
+		<!-- Hook up the FlexSlider -->
+		<script type="text/javascript" charset="utf-8">
+			jQuery(function($){
+				$('.flexslider').flexslider();
+				
+				$('.tw-follow-box').followbox({
+				    'user' : 'miraalrincon',
+				    'bg_image' : 'http://jobyj.in/twitter-follow-box-widget/img/bg10.gif',
+				    'border_color ' : '#FFFFFF'
+				});
+
+				$("#ticker").tweet({
+					username: "MiraalRincon",
+					page: 1,
+					avatar_size: 32,
+					count: 20,
+					loading_text: "loading ..."
+				}).bind("loaded", function() {
+					var ul = $(this).find(".tweet_list");
+					var ticker = function() {
+						setTimeout(function() {
+							var top = ul.position().top;
+							var h = ul.height();
+							var incr = (h / ul.children().length);
+							var newTop = top - incr;
+							if (h + newTop <= 0) newTop = 0;
+							ul.animate( {top: newTop}, 500 );
+							ticker();
+						}, 5000);
+					};
+					ticker();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+		<section id="wrapper">
+			<header>
+				<div id="logo"></div>
+				<nav>
+					<ul id="menu">
+						<li><a href="index.html">Inicio</a></li>
+						<li>
+							<a href="#">Categories</a>
+							<ul>
+								<li><a href="#">CSS</a></li>
+								<li><a href="#">Graphic design</a></li>
+								<li><a href="#">Development tools</a></li>
+								<li><a href="#">Web design</a></li>
+							</ul>
+						</li>
+						<li><a href="about.html">Acerca de</a></li>
+						<li><a href="contact.html">Contacto</a></li>
+					</ul>
+				</nav>
+				<div class="fix"></div>
+			</header>
+			<section id="banner">
+				<article>
+					<div class="flexslider">
+						<ul class="slides">
+							<li>
+								<img src="assets/img/slider/img01.jpg" />
+								<div class="flex-caption">
+									<h3>Lorem ipsum dolor sit amet</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis porttitor massa eget pretium. Mauris vel erat sem, id tempor est. Pellentesque lobortis iaculis massa quis auctor.</p>
+								</div>
+							</li>
+							<li>
+								<a href="#"><img src="assets/img/slider/img02.jpg" /></a>
+								<div class="flex-caption">
+									<h3>Lorem ipsum dolor sit amet</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis porttitor massa eget pretium. Mauris vel erat sem, id tempor est. Pellentesque lobortis iaculis massa quis auctor.</p>
+								</div>
+							</li>
+							<li>
+								<img src="assets/img/slider/img03.jpg" />
+								<div class="flex-caption">
+									<h3>Lorem ipsum dolor sit amet</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis porttitor massa eget pretium. Mauris vel erat sem, id tempor est. Pellentesque lobortis iaculis massa quis auctor.</p>
+								</div>
+							</li>
+							<li>
+								<img src="assets/img/slider/img04.jpg" />
+								<div class="flex-caption">
+									<h3>Lorem ipsum dolor sit amet</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis porttitor massa eget pretium. Mauris vel erat sem, id tempor est. Pellentesque lobortis iaculis massa quis auctor.</p>
+								</div>
+							</li>
+							<li>
+								<img src="assets/img/slider/img05.jpg" />
+								<div class="flex-caption">
+									<h3>Lorem ipsum dolor sit amet</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis porttitor massa eget pretium. Mauris vel erat sem, id tempor est. Pellentesque lobortis iaculis massa quis auctor.</p>
+								</div>
+							</li>
+						</ul>
+				  </div>
+				  <span id="responsiveFlag"></span>
+				  <div class="fix"></div>
+				</article>
+			</section>
+			<section class="full_spaces">
+				<div></div>
+			</section>
+			<section id="conteiner">
+				<article>
+					<div class="article-header">
+						<div class="date">
+							<span>09 Jul.</span>
+						</div>
+						<div class="autor-comment">
+							<span>Posted by <b>Victor Rinc&oacute;n</b></span>
+							<span>|</span>
+							<span>5 Comments</span>
+						</div>
+					</div>
+					<div class="article-body">
+						<h2>Getting Your Gear</h2>
+						<div style="background-image: url(assets/img/article/img01.jpg)" class="article-img"></div>
+						<p>
+							Donec dapibus felis id nulla fermentum sit amet imperdiet mi posuere. Integer convallis libero quis enim tristique ornare. Nunc adipiscing tellus odio, sed blandit magna. Curabitur placerat tortor id dolor euismod ut convallis felis sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Praesent porta ornare venenatis.
+						</p>
+						<a href="javascript:void(0);">Read More...</a>
+					</div>
+				</article>
+				<article>
+					<div class="article-header">
+						<div class="date">
+							<span>09 Jul.</span>
+						</div>
+						<div class="autor-comment">
+							<span>Posted by <b>Victor Rinc&oacute;n</b></span>
+							<span>|</span>
+							<span>5 Comments</span>
+						</div>
+					</div>
+					<div class="article-body">
+						<h2>Getting Your Gear</h2>
+						<div style="background-image: url(assets/img/article/img01.jpg)" class="article-img"></div>
+						<p>
+							Donec dapibus felis id nulla fermentum sit amet imperdiet mi posuere. Integer convallis libero quis enim tristique ornare. Nunc adipiscing tellus odio, sed blandit magna. Curabitur placerat tortor id dolor euismod ut convallis felis sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Praesent porta ornare venenatis.
+						</p>
+						<a href="javascript:void(0);">Read More...</a>
+					</div>
+				</article>
+				<article>
+					<div class="article-header">
+						<div class="date">
+							<span>09 Jul.</span>
+						</div>
+						<div class="autor-comment">
+							<span>Posted by <b>Victor Rinc&oacute;n</b></span>
+							<span>|</span>
+							<span>5 Comments</span>
+						</div>
+					</div>
+					<div class="article-body">
+						<h2>Getting Your Gear</h2>
+						<div style="background-image: url(assets/img/article/img01.jpg)" class="article-img"></div>
+						<p>
+							Donec dapibus felis id nulla fermentum sit amet imperdiet mi posuere. Integer convallis libero quis enim tristique ornare. Nunc adipiscing tellus odio, sed blandit magna. Curabitur placerat tortor id dolor euismod ut convallis felis sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Praesent porta ornare venenatis.
+						</p>
+						<a href="javascript:void(0);">Read More...</a>
+					</div>
+				</article>
+			</section>
+			<aside id="aside-right">
+				<section>
+					<article class="facebook_space">
+						<div class="title">Mira al Rinc&oacute;n</div>
+						<div class="body">
+							<div class="fb-like-box" data-href="https://www.facebook.com/MiraAlRinconCreativo" data-width="292" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
+						</div>
+					</article>
+					<article class="a_banner_space">
+						<div class="a_spaces">
+							<span>Anúnciate</span>
+							<span>Con</span>
+							<span>Nosotros</span>
+						</div>
+					</article>
+					<article class="twitter_space">
+						<div class="title">@MiraalRincon</div>
+						<div class="body">
+							<div class="tw-follow-box"></div>
+						</div>
+					</article>
+					<article class="a_banner_space">
+						<div class="a_spaces">
+							<span>Anúnciate</span>
+							<span>Con</span>
+							<span>Nosotros</span>
+						</div>
+					</article>
+				</section>
+			</aside>
+			<div class="fix"></div>
+			<footer id="footer">
+				<section>
+					<article>
+						<h3>Recent Tweets</h3>
+						<div id="ticker"></div>
+					</article>
+					<article>
+						<h3>Stay Connected</h3>
+						<div id="social">
+							<ul>
+								<li>
+									<a href="javascript:void(0);">
+										<img src="assets/img/social/twitter.png" alt="twitter" style="width: 65%" />
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">
+										<img src="assets/img/social/facebook.png" alt="facebook" style="width: 65%" />
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">
+										<img src="assets/img/social/skype.png" alt="skype" style="width: 65%" />
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">
+										<img src="assets/img/social/rss.png" alt="rss" style="width: 65%" />
+									</a>
+								</li>
+							</ul>
+							<p>Keep track of Unite on all your favorite social networks.</p>
+						</div>
+					</article>
+					<article>
+						<h3>Contact Information</h3>
+						<div id="contact-info">
+							<p>+1 (809) 555-5555</p>
+							<p>miraalrincon@gmail.com</p>
+							<a href="javascript:void(0);">miraalrincon.net</a>
+						</div>
+					</article>
+				</section>
+			</footer>
+		</section>
+		<footer id="copyright">
+			<article>
+				<div id="copy">
+					<span>Copyright © 2013 - Mira al Rincc&oacute;n. Todos los derechos reservados</span>
+					<span>Powered by <a href="javascript:void(0);">Victor Rinc&oacute;n</a></span>
+				</div>
+				<div id="footer-line">
+					<div class="vertical-line" style="left: 298px;"></div>
+					<div class="vertical-line" style="left: 575px;"></div>
+				</div>
+			</article>
+		</footer>
+	</body>
+</html>
